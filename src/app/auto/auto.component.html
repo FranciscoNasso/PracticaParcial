@@ -1,0 +1,23 @@
+
+<h2> QUEDO MAMALON EL CSS! </h2>
+
+<img style="margin-left: 40%;" src="https://theuselessweb.site/chihuahuaspin/spin.gif" alt="chihuahuaspin">
+
+<!--  el fondo esta en /styles.css, el global, abajo de la carpeta assets -->
+
+<hr>
+
+<div class="row">
+    <div class="col-md-4" *ngFor="let auto of Autos">
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{auto.modelo}}</h5>
+        <button [class.selected] = "auto === autoSeleccionado" type="button" (click)="onSelectedAuto(auto)">
+            Ver detalles
+        </button>
+        </div>
+    </div>
+</div>
+
+
+<app-auto-details [auto]="autoSeleccionado"></app-auto-details>
