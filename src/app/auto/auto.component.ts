@@ -12,6 +12,7 @@ import { AutoService } from '../auto-service';
 export class AutoComponent implements OnInit{
   Autos: Auto[] = [];
   autoSeleccionado?: Auto;
+  eliminarAuto?: Auto;
 
   constructor(private autoService: AutoService) { }
 
@@ -26,6 +27,9 @@ export class AutoComponent implements OnInit{
 
   onSelectedAuto(auto: Auto): void {
     this.autoSeleccionado = auto;
+  }
+  onEliminarAuto(auto: Auto): void {
+    this.autoService.eliminar(auto).subscribe(auto => {});
   }
 
 
