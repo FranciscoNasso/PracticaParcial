@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { AutoComponent } from './auto/auto.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AutoDetailsComponent } from './auto-details/auto-details.component';
+import { ModalAutoComponent } from './modal-auto/modal-auto.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AutoComponent,
-    AutoDetailsComponent
+    AutoDetailsComponent,
+    ModalAutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

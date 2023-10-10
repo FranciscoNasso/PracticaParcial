@@ -16,6 +16,8 @@ export class AutoComponent implements OnInit{
 
   constructor(private autoService: AutoService) { }
 
+  showModal: boolean = false;
+
   ngOnInit(): void {
     this.getAutos();
   }
@@ -31,7 +33,5 @@ export class AutoComponent implements OnInit{
   onEliminarAuto(auto: Auto): void {
     this.autoService.eliminar(auto).subscribe(auto => {});
   }
-
-
 
 }

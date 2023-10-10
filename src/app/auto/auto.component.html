@@ -6,8 +6,9 @@
 <!--  el fondo esta en /styles.css, el global, abajo de la carpeta assets -->
 
 <hr>
-
+<button type="button" routerLink="/add">agregar auto</button>
 <div class="row">
+    <button></button>
     <div class="col-md-4" *ngFor="let auto of Autos">
         <div class="card">
         <div class="card-body">
@@ -19,6 +20,5 @@
         </div>
     </div>
 </div>
-
 
 <app-auto-details [auto]="autoSeleccionado"></app-auto-details>

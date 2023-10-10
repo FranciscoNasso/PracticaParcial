@@ -1,0 +1,13 @@
+
+    <h2>Nuevo Auto</h2>
+    <label for="imagen">url de imagen:</label>
+    <input id="imagen" [(ngModel)]= "nuevoAutoImagen" />
+    <label for="modelo">modelo del Auto:</label>
+    <input id="modelo" [(ngModel)]= "nuevoAutoModelo"/>
+    <label for="descripcion">descipcion del Auto:</label>
+    <input id="descripcion" [(ngModel)]= "nuevoAutoDescripcion"/>
+    <label for="tipo">tipo de auto;</label>
+    <input id="tipo" [(ngModel)]= "nuevoAutoTipo"/>
+    
+    <button (click)="guardar()">Guardar</button>
+    <button (click)="cerrar()">Cerrar</button>  
